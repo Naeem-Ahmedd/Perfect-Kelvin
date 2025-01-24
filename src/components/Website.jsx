@@ -13,6 +13,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 
+import logo from "../assets/logo44.png";
+
 const Website = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -60,10 +62,13 @@ const Website = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900 text-white shadow-lg">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold">Perfect Kelvin</div>
+            <div className="flex items-center text-2xl font-bold space-x-2">
+              <span>Perfect Kelvin</span>
+              <img src={logo} alt="logo" className="h-8 w-8 object-contain" />
+            </div>
 
             <button
               className="md:hidden"
@@ -73,7 +78,7 @@ const Website = () => {
             </button>
 
             <div className="hidden md:flex space-x-6">
-              <a href="#home" className="hover:text-blue-200 transition-colors">
+              <a href="#work" className="hover:text-blue-200 transition-colors">
                 Home
               </a>
               <a href="#work" className="hover:text-blue-200 transition-colors">
@@ -95,31 +100,33 @@ const Website = () => {
           </div>
 
           {isMenuOpen && (
-            <div className="md:hidden mt-4 space-y-4 pb-4">
-              <a
-                href="#home"
-                className="block hover:text-blue-200 transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="#work"
-                className="block hover:text-blue-200 transition-colors"
-              >
-                Our Work
-              </a>
-              <a
-                href="#partners"
-                className="block hover:text-blue-200 transition-colors"
-              >
-                Partners
-              </a>
-              <a
-                href="#contact"
-                className="block hover:text-blue-200 transition-colors"
-              >
-                Contact
-              </a>
+            <div className="md:hidden mt-4">
+              <div className="divide-y divide-white/30">
+                <a
+                  href="#work"
+                  className="block hover:bg-white/10 transition-colors py-3 text-center"
+                >
+                  Home
+                </a>
+                <a
+                  href="#work"
+                  className="block hover:bg-white/10 transition-colors py-3 text-center"
+                >
+                  Our Work
+                </a>
+                <a
+                  href="#partners"
+                  className="block hover:bg-white/10 transition-colors py-3 text-center"
+                >
+                  Partners
+                </a>
+                <a
+                  href="#contact"
+                  className="block hover:bg-white/10 transition-colors py-3 text-center"
+                >
+                  Contact
+                </a>
+              </div>
             </div>
           )}
         </nav>
@@ -272,22 +279,34 @@ const Website = () => {
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a
+                    href="#work"
+                    className="hover:text-white transition-colors"
+                  >
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a
+                    href="#work"
+                    className="hover:text-white transition-colors"
+                  >
                     Our Work
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a
+                    href="#partners"
+                    className="hover:text-white transition-colors"
+                  >
                     Partners
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a
+                    href="#contact"
+                    className="hover:text-white transition-colors"
+                  >
                     Contact
                   </a>
                 </li>
